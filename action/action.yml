@@ -1,1 +1,18 @@
 
+name: "comment on PR"
+author: "sara.ahrari97@gmail.com"
+description: "Leaves a comment on a PR".
+branding:
+  icon: 'message-square'  
+  color: 'purple'
+inputs:
+  msg: 
+    description: Comment's message
+    required: true
+  check_for_duplicate_msg:
+    description: If false, action doesn't check for duplicate msg.
+    required: false
+    default: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
